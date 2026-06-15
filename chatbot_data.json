@@ -1,0 +1,703 @@
+[
+  {
+    "intent": "ulcer_info",
+    "question_ar": "ما هي قرحة القدم السكري؟",
+    "question_en": "What is diabetic foot ulcer?",
+    "answer_ar": "قرحة القدم السكري هي جرح يحدث بسبب ضعف الدورة الدموية وارتفاع السكر.",
+    "answer_en": "Diabetic foot ulcer is a wound caused by poor blood circulation and high blood sugar."
+  },
+  {
+    "intent": "ulcer_cause",
+    "question_ar": "ما سبب قرحة القدم؟",
+    "question_en": "What causes foot ulcer?",
+    "answer_ar": "تحدث بسبب الضغط المستمر وارتفاع السكر وضعف الأعصاب.",
+    "answer_en": "It is caused by continuous pressure, high blood sugar, and nerve damage."
+  },
+  {
+    "intent": "ulcer_symptoms",
+    "question_ar": "ما أعراض قرحة القدم؟",
+    "question_en": "What are ulcer symptoms?",
+    "answer_ar": "تشمل احمرار، تورم، إفرازات، وألم.",
+    "answer_en": "Symptoms include redness, swelling, discharge, and pain."
+  },
+  {
+    "intent": "ulcer_danger",
+    "question_ar": "هل قرحة القدم خطيرة؟",
+    "question_en": "Is foot ulcer dangerous?",
+    "answer_ar": "نعم، قد تؤدي إلى مضاعفات خطيرة إذا لم تُعالج.",
+    "answer_en": "Yes, it can lead to serious complications if untreated."
+  },
+  {
+    "intent": "ulcer_treatment",
+    "question_ar": "كيف يتم علاج قرحة القدم؟",
+    "question_en": "How is foot ulcer treated?",
+    "answer_ar": "يتم العلاج بتنظيف الجرح وتقليل الضغط ومتابعة الطبيب.",
+    "answer_en": "Treatment includes cleaning the wound, reducing pressure, and medical care."
+  },
+  {
+    "intent": "ulcer_prevention",
+    "question_ar": "كيف أقي نفسي من قرحة القدم؟",
+    "question_en": "How to prevent foot ulcer?",
+    "answer_ar": "عن طريق التحكم في السكر وفحص القدم يوميًا.",
+    "answer_en": "By controlling blood sugar and checking your feet daily."
+  },
+  {
+    "intent": "ulcer_healing_time",
+    "question_ar": "كم تستغرق قرحة القدم للشفاء؟",
+    "question_en": "How long does ulcer heal?",
+    "answer_ar": "تعتمد على الحالة، قد تستغرق أسابيع أو شهور.",
+    "answer_en": "It depends on the case, it may take weeks or months."
+  },
+  {
+    "intent": "ulcer_infection",
+    "question_ar": "كيف أعرف أن القرحة ملتهبة؟",
+    "question_en": "How to know if ulcer is infected?",
+    "answer_ar": "إذا كان هناك صديد أو رائحة أو ألم شديد.",
+    "answer_en": "If there is pus, bad smell, or severe pain."
+  },
+  {
+    "intent": "ulcer_pressure",
+    "question_ar": "هل الضغط يزيد القرحة؟",
+    "question_en": "Does pressure worsen ulcer?",
+    "answer_ar": "نعم، الضغط المستمر يزيد الحالة سوءًا.",
+    "answer_en": "Yes, continuous pressure worsens the condition."
+  },
+  {
+    "intent": "ulcer_walk",
+    "question_ar": "هل المشي يؤثر على القرحة؟",
+    "question_en": "Does walking affect ulcer?",
+    "answer_ar": "المشي الزائد قد يسبب تفاقم القرحة.",
+    "answer_en": "Excessive walking may worsen the ulcer."
+  },
+  {
+    "intent": "ulcer_cleaning",
+    "question_ar": "كيف أنظف القرحة؟",
+    "question_en": "How to clean ulcer?",
+    "answer_ar": "تنظيفها بمحلول معقم وتغطيتها بضمادة نظيفة.",
+    "answer_en": "Clean with antiseptic and cover with a clean dressing."
+  },
+  {
+    "intent": "ulcer_bandage",
+    "question_ar": "هل يجب تغطية القرحة؟",
+    "question_en": "Should ulcer be covered?",
+    "answer_ar": "نعم، لتجنب العدوى.",
+    "answer_en": "Yes, to prevent infection."
+  },
+  {
+    "intent": "ulcer_shoes",
+    "question_ar": "هل نوع الحذاء مهم؟",
+    "question_en": "Is footwear important?",
+    "answer_ar": "نعم، يجب ارتداء أحذية مريحة لتقليل الضغط.",
+    "answer_en": "Yes, wear comfortable shoes to reduce pressure."
+  },
+  {
+    "intent": "ulcer_diabetes",
+    "question_ar": "هل السكر يؤثر على القرحة؟",
+    "question_en": "Does diabetes affect ulcer?",
+    "answer_ar": "نعم، ارتفاع السكر يبطئ الشفاء.",
+    "answer_en": "Yes, high sugar delays healing."
+  },
+  {
+    "intent": "ulcer_doctor",
+    "question_ar": "متى أذهب للطبيب؟",
+    "question_en": "When should I see a doctor?",
+    "answer_ar": "إذا زادت الأعراض أو لم تتحسن.",
+    "answer_en": "If symptoms worsen or do not improve."
+  },
+  {
+    "intent": "ulcer_amputation",
+    "question_ar": "هل القرحة ممكن تؤدي لبتر؟",
+    "question_en": "Can ulcer lead to amputation?",
+    "answer_ar": "في الحالات الشديدة نعم.",
+    "answer_en": "In severe cases, yes."
+  },
+  {
+    "intent": "ulcer_pain",
+    "question_ar": "هل القرحة مؤلمة؟",
+    "question_en": "Is ulcer painful?",
+    "answer_ar": "قد تكون مؤلمة أو بدون ألم حسب الحالة.",
+    "answer_en": "It may or may not be painful depending on condition."
+  },
+  {
+    "intent": "ulcer_color",
+    "question_ar": "هل تغير لون الجرح خطر؟",
+    "question_en": "Is color change dangerous?",
+    "answer_ar": "نعم، قد يدل على تدهور الحالة.",
+    "answer_en": "Yes, it may indicate worsening condition."
+  },
+  {
+    "intent": "ulcer_smell",
+    "question_ar": "هل الرائحة السيئة خطر؟",
+    "question_en": "Is bad smell dangerous?",
+    "answer_ar": "نعم، قد تدل على عدوى.",
+    "answer_en": "Yes, it may indicate infection."
+  },
+  {
+    "intent": "ulcer_daily_check",
+    "question_ar": "هل يجب فحص القدم يوميًا؟",
+    "question_en": "Should I check feet daily?",
+    "answer_ar": "نعم، مهم جدًا لتجنب المضاعفات.",
+    "answer_en": "Yes, it is very important."
+  },
+
+  {
+    "intent": "stroke_info",
+    "question_ar": "ما هي الجلطة الدماغية؟",
+    "question_en": "What is a stroke?",
+    "answer_ar": "الجلطة تحدث عند توقف تدفق الدم إلى المخ.",
+    "answer_en": "Stroke occurs when blood flow to the brain stops."
+  },
+  {
+    "intent": "stroke_symptoms",
+    "question_ar": "ما أعراض الجلطة؟",
+    "question_en": "What are stroke symptoms?",
+    "answer_ar": "ضعف مفاجئ، صعوبة كلام، فقدان توازن.",
+    "answer_en": "Sudden weakness, speech difficulty, loss of balance."
+  },
+  {
+    "intent": "stroke_danger",
+    "question_ar": "هل الجلطة خطيرة؟",
+    "question_en": "Is stroke dangerous?",
+    "answer_ar": "نعم، حالة طارئة تحتاج تدخل سريع.",
+    "answer_en": "Yes, it is a medical emergency."
+  },
+  {
+    "intent": "stroke_prevention",
+    "question_ar": "كيف أمنع الجلطة؟",
+    "question_en": "How to prevent stroke?",
+    "answer_ar": "عن طريق التحكم في الضغط والسكر.",
+    "answer_en": "By controlling blood pressure and sugar."
+  },
+  {
+    "intent": "stroke_pressure",
+    "question_ar": "هل الضغط يسبب جلطة؟",
+    "question_en": "Does hypertension cause stroke?",
+    "answer_ar": "نعم، هو من أهم الأسباب.",
+    "answer_en": "Yes, it is a major cause."
+  },
+  {
+    "intent": "stroke_smoking",
+    "question_ar": "هل التدخين يسبب جلطة؟",
+    "question_en": "Does smoking cause stroke?",
+    "answer_ar": "نعم، يزيد خطر الإصابة.",
+    "answer_en": "Yes, it increases risk."
+  },
+  {
+    "intent": "stroke_age",
+    "question_ar": "هل السن عامل مهم؟",
+    "question_en": "Is age a factor?",
+    "answer_ar": "نعم، يزيد الخطر مع التقدم في العمر.",
+    "answer_en": "Yes, risk increases with age."
+  },
+  {
+    "intent": "stroke_treatment",
+    "question_ar": "كيف يتم علاج الجلطة؟",
+    "question_en": "How is stroke treated?",
+    "answer_ar": "يجب التدخل الطبي السريع.",
+    "answer_en": "Immediate medical treatment is required."
+  },
+  {
+    "intent": "stroke_recovery",
+    "question_ar": "هل يمكن الشفاء من الجلطة؟",
+    "question_en": "Can stroke be recovered?",
+    "answer_ar": "نعم، حسب الحالة والعلاج.",
+    "answer_en": "Yes, depending on severity and treatment."
+  },
+  {
+    "intent": "stroke_time",
+    "question_ar": "هل الوقت مهم في الجلطة؟",
+    "question_en": "Is time important in stroke?",
+    "answer_ar": "نعم، كل دقيقة مهمة جدًا.",
+    "answer_en": "Yes, every minute matters."
+  },
+  {
+    "intent": "stroke_face",
+    "question_ar": "هل اعوجاج الوجه علامة؟",
+    "question_en": "Is facial drooping a sign?",
+    "answer_ar": "نعم، من أهم الأعراض.",
+    "answer_en": "Yes, it is a key symptom."
+  },
+  {
+    "intent": "stroke_speech",
+    "question_ar": "هل صعوبة الكلام علامة؟",
+    "question_en": "Is speech difficulty a sign?",
+    "answer_ar": "نعم، علامة خطيرة.",
+    "answer_en": "Yes, it is a serious sign."
+  },
+  {
+    "intent": "stroke_vision",
+    "question_ar": "هل ضعف النظر علامة؟",
+    "question_en": "Is vision loss a sign?",
+    "answer_ar": "نعم، ممكن يكون مؤشر.",
+    "answer_en": "Yes, it may indicate stroke."
+  },
+  {
+    "intent": "stroke_balance",
+    "question_ar": "هل فقدان التوازن علامة؟",
+    "question_en": "Is loss of balance a sign?",
+    "answer_ar": "نعم، من أعراض الجلطة.",
+    "answer_en": "Yes, it is a symptom."
+  },
+  {
+    "intent": "stroke_risk",
+    "question_ar": "هل أنا معرض للجلطة؟",
+    "question_en": "Am I at risk of stroke?",
+    "answer_ar": "يعتمد على عوامل مثل الضغط والسكر.",
+    "answer_en": "Depends on factors like BP and diabetes."
+  },
+  {
+    "intent": "stroke_exercise",
+    "question_ar": "هل الرياضة تقلل الجلطة؟",
+    "question_en": "Does exercise reduce stroke risk?",
+    "answer_ar": "نعم، تقلل الخطر بشكل كبير.",
+    "answer_en": "Yes, it significantly reduces risk."
+  },
+  {
+    "intent": "stroke_food",
+    "question_ar": "هل الأكل يؤثر؟",
+    "question_en": "Does diet affect stroke?",
+    "answer_ar": "نعم، الأكل الصحي يقلل الخطر.",
+    "answer_en": "Yes, healthy diet lowers risk."
+  },
+  {
+    "intent": "stroke_stress",
+    "question_ar": "هل التوتر يسبب جلطة؟",
+    "question_en": "Does stress cause stroke?",
+    "answer_ar": "قد يزيد من عوامل الخطر.",
+    "answer_en": "It may increase risk factors."
+  },
+  {
+    "intent": "stroke_warning",
+    "question_ar": "متى أطلب الإسعاف؟",
+    "question_en": "When to call emergency?",
+    "answer_ar": "عند ظهور الأعراض فورًا.",
+    "answer_en": "Immediately when symptoms appear."
+  },
+  {
+    "intent": "stroke_repeat",
+    "question_ar": "هل الجلطة ممكن تتكرر؟",
+    "question_en": "Can stroke happen again?",
+    "answer_ar": "نعم، إذا لم يتم الوقاية.",
+    "answer_en": "Yes, if not prevented."
+  },
+  {
+    "intent": "health_info",
+    "question_ar": "ما هو النظام الصحي الجيد؟",
+    "question_en": "What is a healthy lifestyle?",
+    "answer_ar": "يشمل الأكل الصحي، الرياضة، والنوم الجيد.",
+    "answer_en": "It includes healthy food, exercise, and good sleep."
+  },
+  {
+    "intent": "health_diet",
+    "question_ar": "ما هو الأكل الصحي؟",
+    "question_en": "What is healthy food?",
+    "answer_ar": "الخضروات، الفواكه، والبروتينات الصحية.",
+    "answer_en": "Vegetables, fruits, and healthy proteins."
+  },
+  {
+    "intent": "health_water",
+    "question_ar": "كم كمية الماء المطلوبة؟",
+    "question_en": "How much water should I drink?",
+    "answer_ar": "حوالي 2-3 لتر يوميًا.",
+    "answer_en": "About 2-3 liters daily."
+  },
+  {
+    "intent": "health_sleep",
+    "question_ar": "كم عدد ساعات النوم؟",
+    "question_en": "How many hours should I sleep?",
+    "answer_ar": "من 7 إلى 8 ساعات يوميًا.",
+    "answer_en": "7 to 8 hours daily."
+  },
+  {
+    "intent": "health_exercise",
+    "question_ar": "هل الرياضة مهمة؟",
+    "question_en": "Is exercise important?",
+    "answer_ar": "نعم، تحسن الصحة العامة.",
+    "answer_en": "Yes, it improves overall health."
+  },
+  {
+    "intent": "health_smoking",
+    "question_ar": "هل التدخين مضر؟",
+    "question_en": "Is smoking harmful?",
+    "answer_ar": "نعم، يسبب أمراض كثيرة.",
+    "answer_en": "Yes, it causes many diseases."
+  },
+  {
+    "intent": "health_stress",
+    "question_ar": "كيف أتعامل مع التوتر؟",
+    "question_en": "How to deal with stress?",
+    "answer_ar": "بالراحة، التأمل، والتنظيم.",
+    "answer_en": "By relaxation, meditation, and organization."
+  },
+  {
+    "intent": "health_weight",
+    "question_ar": "كيف أحافظ على وزني؟",
+    "question_en": "How to maintain weight?",
+    "answer_ar": "بالتوازن بين الأكل والحركة.",
+    "answer_en": "Balance diet and activity."
+  },
+  {
+    "intent": "health_checkup",
+    "question_ar": "هل الفحص الدوري مهم؟",
+    "question_en": "Are regular checkups important?",
+    "answer_ar": "نعم، للكشف المبكر عن الأمراض.",
+    "answer_en": "Yes, for early detection."
+  },
+  {
+    "intent": "health_diabetes",
+    "question_ar": "كيف أتحكم في السكر؟",
+    "question_en": "How to control diabetes?",
+    "answer_ar": "بالأكل الصحي والمتابعة الطبية.",
+    "answer_en": "With diet and medical follow-up."
+  },
+  {
+    "intent": "health_bp",
+    "question_ar": "كيف أتحكم في الضغط؟",
+    "question_en": "How to control blood pressure?",
+    "answer_ar": "تقليل الملح وممارسة الرياضة.",
+    "answer_en": "Reduce salt and exercise."
+  },
+  {
+    "intent": "health_immunity",
+    "question_ar": "كيف أقوي المناعة؟",
+    "question_en": "How to boost immunity?",
+    "answer_ar": "بالغذاء الصحي والنوم الجيد.",
+    "answer_en": "With healthy diet and sleep."
+  },
+  {
+    "intent": "health_food_bad",
+    "question_ar": "ما الأطعمة الضارة؟",
+    "question_en": "What foods are unhealthy?",
+    "answer_ar": "المقليات والسكريات الزائدة.",
+    "answer_en": "Fried foods and excess sugar."
+  },
+  {
+    "intent": "health_walk",
+    "question_ar": "هل المشي مفيد؟",
+    "question_en": "Is walking beneficial?",
+    "answer_ar": "نعم، يحسن الدورة الدموية.",
+    "answer_en": "Yes, improves circulation."
+  },
+  {
+    "intent": "health_energy",
+    "question_ar": "كيف أزيد طاقتي؟",
+    "question_en": "How to increase energy?",
+    "answer_ar": "بالنوم الجيد والتغذية.",
+    "answer_en": "With sleep and nutrition."
+  },
+  {
+    "intent": "health_heart",
+    "question_ar": "كيف أحافظ على القلب؟",
+    "question_en": "How to keep heart healthy?",
+    "answer_ar": "رياضة وأكل صحي.",
+    "answer_en": "Exercise and healthy food."
+  },
+  {
+    "intent": "health_sugar",
+    "question_ar": "هل السكر خطر؟",
+    "question_en": "Is sugar dangerous?",
+    "answer_ar": "نعم إذا زاد عن الحد.",
+    "answer_en": "Yes, if excessive."
+  },
+  {
+    "intent": "health_fastfood",
+    "question_ar": "هل الفاست فود مضر؟",
+    "question_en": "Is fast food harmful?",
+    "answer_ar": "نعم، يؤثر على الصحة.",
+    "answer_en": "Yes, it affects health."
+  },
+  {
+    "intent": "health_hydration",
+    "question_ar": "هل شرب الماء مهم؟",
+    "question_en": "Is hydration important?",
+    "answer_ar": "نعم، ضروري للجسم.",
+    "answer_en": "Yes, essential."
+  },
+  {
+    "intent": "health_balance",
+    "question_ar": "كيف أعيش حياة متوازنة؟",
+    "question_en": "How to live balanced life?",
+    "answer_ar": "تنظيم الوقت والاهتمام بالصحة.",
+    "answer_en": "Time management and health care."
+  },
+  {
+    "intent": "device_info",
+    "question_ar": "ما وظيفة الجهاز؟",
+    "question_en": "What does the device do?",
+    "answer_ar": "يقيس الضغط والحرارة ويتوقع الخطر.",
+    "answer_en": "It measures pressure and temperature and predicts risk."
+  },
+  {
+    "intent": "device_temp",
+    "question_ar": "ماذا يعني ارتفاع الحرارة؟",
+    "question_en": "What does high temperature mean?",
+    "answer_ar": "قد يدل على التهاب.",
+    "answer_en": "It may indicate infection."
+  },
+  {
+    "intent": "device_pressure",
+    "question_ar": "ماذا يعني ارتفاع الضغط؟",
+    "question_en": "What does high pressure mean?",
+    "answer_ar": "ضغط زائد قد يسبب ضرر.",
+    "answer_en": "High pressure may cause damage."
+  },
+  {
+    "intent": "device_risk",
+    "question_ar": "هل الجهاز يحدد الخطر؟",
+    "question_en": "Does device detect risk?",
+    "answer_ar": "نعم باستخدام AI.",
+    "answer_en": "Yes using AI."
+  },
+  {
+    "intent": "device_accuracy",
+    "question_ar": "هل الجهاز دقيق؟",
+    "question_en": "Is device accurate?",
+    "answer_ar": "يعتمد على البيانات.",
+    "answer_en": "Depends on data."
+  },
+  {
+    "intent": "device_use",
+    "question_ar": "كيف أستخدم الجهاز؟",
+    "question_en": "How to use device?",
+    "answer_ar": "ارتدِ الجهاز واتبع التعليمات.",
+    "answer_en": "Wear it and follow instructions."
+  },
+  {
+    "intent": "device_warning",
+    "question_ar": "متى يظهر تحذير؟",
+    "question_en": "When warning appears?",
+    "answer_ar": "عند وجود خطر.",
+    "answer_en": "When risk detected."
+  },
+  {
+    "intent": "device_data",
+    "question_ar": "هل الجهاز يسجل البيانات؟",
+    "question_en": "Does device save data?",
+    "answer_ar": "نعم في التطبيق.",
+    "answer_en": "Yes in app."
+  },
+  {
+    "intent": "device_connection",
+    "question_ar": "هل الجهاز متصل بالموبايل؟",
+    "question_en": "Is device connected to phone?",
+    "answer_ar": "نعم عبر التطبيق.",
+    "answer_en": "Yes via app."
+  },
+  {
+    "intent": "device_battery",
+    "question_ar": "كم مدة البطارية؟",
+    "question_en": "Battery duration?",
+    "answer_ar": "حسب الاستخدام.",
+    "answer_en": "Depends on use."
+  },
+  {
+    "intent": "device_clean",
+    "question_ar": "هل يجب تنظيف الجهاز؟",
+    "question_en": "Should I clean device?",
+    "answer_ar": "نعم للحفاظ عليه.",
+    "answer_en": "Yes to maintain it."
+  },
+  {
+    "intent": "device_error",
+    "question_ar": "ماذا أفعل إذا حدث خطأ؟",
+    "question_en": "What if error occurs?",
+    "answer_ar": "أعد التشغيل أو تواصل مع الدعم.",
+    "answer_en": "Restart or contact support."
+  },
+  {
+    "intent": "device_alert",
+    "question_ar": "هل الجهاز يعطي تنبيه؟",
+    "question_en": "Does it alert?",
+    "answer_ar": "نعم عند الخطر.",
+    "answer_en": "Yes when risk."
+  },
+  {
+    "intent": "device_temp_safe",
+    "question_ar": "ما درجة الحرارة الطبيعية؟",
+    "question_en": "Normal temperature?",
+    "answer_ar": "حوالي 36-37.",
+    "answer_en": "Around 36-37."
+  },
+  {
+    "intent": "device_pressure_safe",
+    "question_ar": "ما الضغط الطبيعي؟",
+    "question_en": "Normal pressure?",
+    "answer_ar": "ضمن الحدود الطبيعية.",
+    "answer_en": "Within safe limits."
+  },
+  {
+    "intent": "device_sync",
+    "question_ar": "هل يتم مزامنة البيانات؟",
+    "question_en": "Is data synced?",
+    "answer_ar": "نعم مع التطبيق.",
+    "answer_en": "Yes with app."
+  },
+  {
+    "intent": "device_real_time",
+    "question_ar": "هل الجهاز يعمل لحظيًا؟",
+    "question_en": "Is it real-time?",
+    "answer_ar": "نعم يعطي بيانات مباشرة.",
+    "answer_en": "Yes real-time."
+  },
+  {
+    "intent": "device_ai",
+    "question_ar": "هل يستخدم ذكاء اصطناعي؟",
+    "question_en": "Does it use AI?",
+    "answer_ar": "نعم لتحليل البيانات.",
+    "answer_en": "Yes for analysis."
+  },
+  {
+    "intent": "device_risk_high",
+    "question_ar": "ماذا لو الخطر عالي؟",
+    "question_en": "What if high risk?",
+    "answer_ar": "يجب استشارة الطبيب فورًا.",
+    "answer_en": "Consult doctor immediately."
+  },
+  {
+    "intent": "device_risk_low",
+    "question_ar": "ماذا لو الخطر منخفض؟",
+    "question_en": "What if low risk?",
+    "answer_ar": "استمر في المتابعة.",
+    "answer_en": "Continue monitoring."
+  },
+  {
+    "intent": "system_info",
+    "question_ar": "ما وظيفة التطبيق؟",
+    "question_en": "What does the app do?",
+    "answer_ar": "يساعد في متابعة الحالة الصحية.",
+    "answer_en": "It helps monitor health."
+  },
+  {
+    "intent": "system_models",
+    "question_ar": "ما النماذج المستخدمة؟",
+    "question_en": "What models are used?",
+    "answer_ar": "تصنيف صور وتوقعات صحية.",
+    "answer_en": "Image classification and predictions."
+  },
+  {
+    "intent": "system_upload",
+    "question_ar": "كيف أرفع صورة؟",
+    "question_en": "How to upload image?",
+    "answer_ar": "من داخل التطبيق.",
+    "answer_en": "From the app."
+  },
+  {
+    "intent": "system_prediction",
+    "question_ar": "كيف تظهر النتيجة؟",
+    "question_en": "How results appear?",
+    "answer_ar": "بعد تحليل البيانات.",
+    "answer_en": "After analysis."
+  },
+  {
+    "intent": "system_chatbot",
+    "question_ar": "ما وظيفة الشات بوت؟",
+    "question_en": "What does chatbot do?",
+    "answer_ar": "يرد على استفساراتك.",
+    "answer_en": "Answers your questions."
+  },
+  {
+    "intent": "system_voice",
+    "question_ar": "هل يدعم الصوت؟",
+    "question_en": "Does it support voice?",
+    "answer_ar": "نعم.",
+    "answer_en": "Yes."
+  },
+  {
+    "intent": "system_language",
+    "question_ar": "هل يدعم العربي؟",
+    "question_en": "Does it support Arabic?",
+    "answer_ar": "نعم عربي وإنجليزي.",
+    "answer_en": "Yes Arabic and English."
+  },
+  {
+    "intent": "system_login",
+    "question_ar": "هل يحتاج تسجيل؟",
+    "question_en": "Does it need login?",
+    "answer_ar": "حسب النظام.",
+    "answer_en": "Depends."
+  },
+  {
+    "intent": "system_data",
+    "question_ar": "هل بياناتي محفوظة؟",
+    "question_en": "Is my data saved?",
+    "answer_ar": "نعم بشكل آمن.",
+    "answer_en": "Yes securely."
+  },
+  {
+    "intent": "system_privacy",
+    "question_ar": "هل بياناتي آمنة؟",
+    "question_en": "Is my data safe?",
+    "answer_ar": "نعم.",
+    "answer_en": "Yes."
+  },
+  {
+    "intent": "system_error",
+    "question_ar": "ماذا أفعل عند الخطأ؟",
+    "question_en": "What if error?",
+    "answer_ar": "أعد المحاولة.",
+    "answer_en": "Retry."
+  },
+  {
+    "intent": "system_update",
+    "question_ar": "هل يحتاج تحديث؟",
+    "question_en": "Does it need updates?",
+    "answer_ar": "نعم لتحسين الأداء.",
+    "answer_en": "Yes for improvements."
+  },
+  {
+    "intent": "system_speed",
+    "question_ar": "هل سريع؟",
+    "question_en": "Is it fast?",
+    "answer_ar": "نعم.",
+    "answer_en": "Yes."
+  },
+  {
+    "intent": "system_ai",
+    "question_ar": "هل يستخدم AI؟",
+    "question_en": "Does it use AI?",
+    "answer_ar": "نعم.",
+    "answer_en": "Yes."
+  },
+  {
+    "intent": "system_help",
+    "question_ar": "هل يوجد دعم؟",
+    "question_en": "Is support available?",
+    "answer_ar": "نعم.",
+    "answer_en": "Yes."
+  },
+  {
+    "intent": "system_usage",
+    "question_ar": "هل سهل الاستخدام؟",
+    "question_en": "Is it easy to use?",
+    "answer_ar": "نعم.",
+    "answer_en": "Yes."
+  },
+  {
+    "intent": "system_features",
+    "question_ar": "ما مميزات التطبيق؟",
+    "question_en": "App features?",
+    "answer_ar": "تحليل، تنبؤ، متابعة.",
+    "answer_en": "Analysis, prediction, monitoring."
+  },
+  {
+    "intent": "system_accuracy",
+    "question_ar": "هل النتائج دقيقة؟",
+    "question_en": "Are results accurate?",
+    "answer_ar": "تعتمد على البيانات.",
+    "answer_en": "Depends on data."
+  },
+  {
+    "intent": "system_offline",
+    "question_ar": "هل يعمل بدون إنترنت؟",
+    "question_en": "Does it work offline?",
+    "answer_ar": "جزئيًا.",
+    "answer_en": "Partially."
+  },
+  {
+    "intent": "system_feedback",
+    "question_ar": "هل يمكنني تقييم التطبيق؟",
+    "question_en": "Can I give feedback?",
+    "answer_ar": "نعم.",
+    "answer_en": "Yes."
+  }
+]
