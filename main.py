@@ -1,5 +1,8 @@
 import os
 import json
+import threading
+import time
+import requests
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
@@ -21,6 +24,19 @@ chat_history = {}
 
 with open("chatbot_data.json", "r", encoding="utf-8") as f:
     faq_data = json.load(f)
+
+# Keep-alive
+def keep_alive():
+    time.sleep(60)
+    while True:
+        try:
+            requests.get("https://chatboot-production-0ece.up.railway.app/")
+            print("Keep-alive ping sent")
+        except:
+            pass
+        time.sleep(300)
+
+threading.Thread(target=keep_alive, daemon=True).start()
 
 class ChatRequest(BaseModel):
     user_id: str
@@ -140,7 +156,7 @@ def chat(req: ChatRequest):
             Assistant:
             """
             response = client.models.generate_content(
-                model="gemini-2.0-flash-lite",
+                model="models/gemini-flash-latest",
                 contents=full_prompt
             )
             text_reply = response.text
@@ -188,7 +204,7 @@ Simulate 3 future scenarios. Reply in JSON only with no extra text:
 }}
 """
         response = client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model="models/gemini-flash-latest",
             contents=prompt
         )
         text = response.text.replace("```json", "").replace("```", "").strip()
@@ -223,7 +239,7 @@ Reply in English with JSON only:
 {{"factors": ["عامل 1", "عامل 2", "عامل 3"], "meaning": "شرح بسيط", "calculation": "كيف حسب", "confidence": "مستوى الثقة"}}"""
 
         response = client.models.generate_content(
-            model="gemini-2.0-flash-lite",
+            model="models/gemini-flash-latest",
             contents=prompt
         )
         text = response.text.replace("```json", "").replace("```", "").strip()
