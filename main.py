@@ -1,9 +1,9 @@
 import os
+import json
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
-import google.generativeai as genai
-import json
+from google import genai
 
 app = FastAPI()
 
@@ -14,9 +14,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-genai.configure(api_key=os.environ.get("GEMINI_API_KEY", ""))
-
-model = genai.GenerativeModel("gemini-2.0-flash-lite")
+client = genai.Client(api_key=os.environ.get("GEMINI_API_KEY", ""))
 
 user_memory = {}
 chat_history = {}
@@ -57,28 +55,28 @@ def check_alerts(memory):
 
 PROMPT = """
 You are an intelligent medical assistant inside a smart healthcare system.
-
 You have access to:
 - Foot ulcer classification
 - Stroke risk prediction
 - Foot temperature & pressure
 - General health prediction
-
 Your job:
 - Explain condition simply
 - Give helpful advice
 - Ask ONE follow-up question
 - Act like a real doctor
-
 Rules:
 - Keep response SHORT (2-4 lines)
 - Use patient data if available
 - If data shows risk → warn clearly
 - Do NOT give final diagnosis
-
 Language:
 - Reply in same language as user
 """
+
+@app.get("/")
+def root():
+    return {"message": "🚀 Chatbot API Running"}
 
 @app.post("/update_data")
 def update_data(data: dict):
@@ -102,7 +100,6 @@ def chat(req: ChatRequest):
             user_memory[req.user_id] = {}
         if req.user_id not in chat_history:
             chat_history[req.user_id] = []
-
         if req.image_result:
             user_memory[req.user_id]["image_result"] = req.image_result
         if req.stroke_result:
@@ -116,12 +113,11 @@ def chat(req: ChatRequest):
 
         memory = user_memory.get(req.user_id, {})
         history = chat_history.get(req.user_id, [])
-
         alerts = check_alerts(memory)
         faq = search_faq(req.user_input)
 
         if faq:
-            if any("؀" <= c <= "ۿ" for c in req.user_input):
+            if any("\u0600" <= c <= "\u06FF" for c in req.user_input):
                 text_reply = faq["answer_ar"]
             else:
                 text_reply = faq["answer_en"]
@@ -129,28 +125,24 @@ def chat(req: ChatRequest):
             patient_data = ""
             for key, value in memory.items():
                 patient_data += f"{key}: {value}\n"
-
             history_text = ""
             for h in history[-6:]:
                 history_text += f"{h}\n"
-
             full_prompt = f"""
             {PROMPT}
-
             Patient Data:
             {patient_data if patient_data else "No data"}
-
             Alerts:
             {alerts if alerts else "No alerts"}
-
             Conversation History:
             {history_text if history_text else "No previous conversation"}
-
             Patient: {req.user_input}
             Assistant:
             """
-
-            response = model.generate_content(full_prompt)
+            response = client.models.generate_content(
+                model="gemini-2.0-flash-lite",
+                contents=full_prompt
+            )
             text_reply = response.text
 
         chat_history[req.user_id].append(f"User: {req.user_input}")
@@ -161,10 +153,8 @@ def chat(req: ChatRequest):
             "audio": None,
             "alerts": alerts
         }
-
     except Exception as e:
         return {"error": str(e)}
-
 
 class ScenarioRequest(BaseModel):
     foot_risk: float = 0.0
@@ -179,7 +169,6 @@ def scenario(req: ScenarioRequest):
             prompt = f"""
 You are a medical simulation system for a diabetic patient.
 Patient data: foot risk {req.foot_risk}%, ulcer grade: {req.grade}, last scan: {req.last_scan}
-
 Simulate 3 future scenarios. Reply in JSON only with no extra text:
 {{
   "worst": {{"week": "...", "month": "...", "tips": ["...", "...", "..."]}},
@@ -191,7 +180,6 @@ Simulate 3 future scenarios. Reply in JSON only with no extra text:
             prompt = f"""
 أنت نظام محاكاة طبية لمريض سكري.
 بيانات المريض: خطر القدم {req.foot_risk}%، درجة القرحة: {req.grade}، آخر فحص: {req.last_scan}
-
 أجب بـ JSON فقط بدون أي نص إضافي:
 {{
   "worst": {{"week": "...", "month": "...", "tips": ["...", "...", "..."]}},
@@ -199,7 +187,10 @@ Simulate 3 future scenarios. Reply in JSON only with no extra text:
   "best": {{"week": "...", "month": "...", "tips": ["...", "...", "..."]}}
 }}
 """
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model="gemini-2.0-flash-lite",
+            contents=prompt
+        )
         text = response.text.replace("```json", "").replace("```", "").strip()
         start = text.find("{")
         end = text.rfind("}") + 1
@@ -209,7 +200,6 @@ Simulate 3 future scenarios. Reply in JSON only with no extra text:
         return result
     except Exception as e:
         return {"error": str(e)}
-
 
 class XAIRequest(BaseModel):
     event_type: str = ""
@@ -232,7 +222,10 @@ Reply in English with JSON only:
 أجب بالعربية بـ JSON فقط:
 {{"factors": ["عامل 1", "عامل 2", "عامل 3"], "meaning": "شرح بسيط", "calculation": "كيف حسب", "confidence": "مستوى الثقة"}}"""
 
-        response = model.generate_content(prompt)
+        response = client.models.generate_content(
+            model="gemini-2.0-flash-lite",
+            contents=prompt
+        )
         text = response.text.replace("```json", "").replace("```", "").strip()
         start = text.find("{")
         end = text.rfind("}") + 1
